@@ -7,7 +7,10 @@
     "frontend": "cd frontend && npm run dev",
     "backend": "cd backend && nodemon app.js",
     "python-backend": "cd backend && cd Pythonmodel && python Backend.py",
-    "start": "concurrently \"npm run backend\" \"npm run python-backend\""
+    "start": "concurrently \"npm run backend\" \"npm run python-backend\"",
+    "fr": "cd frontend && npm run dev",
+    "be": "cd backend && nodemon app.js",
+    "pb": "cd backend && cd Pythonmodel && python Backend.py"
   },
   "keywords": [],
   "author": "",
