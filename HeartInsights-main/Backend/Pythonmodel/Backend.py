@@ -13,6 +13,17 @@ import tempfile
 import os
 from datetime import datetime
 
+from flask import Flask, send_from_directory
+
+app = Flask(__name__, static_folder='frontend/dist', static_url_path='/')
+
+@app.route('/')
+def serve_frontend():
+    return send_from_directory(app.static_folder, 'index.html')
+
+# Your existing API routes...
+
+
 app = Flask(__name__)
 CORS(app)
 @app.route('/')

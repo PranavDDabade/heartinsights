@@ -1,0 +1,19 @@
+{
+  "name": "heartinsights-main",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "frontend": "cd frontend && npm run dev",
+    "backend": "cd backend && nodemon app.js",
+    "python-backend": "cd backend && cd Pythonmodel && python Backend.py",
+    "start": "concurrently \"npm run backend\" \"npm run python-backend\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
