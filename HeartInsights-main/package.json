@@ -10,7 +10,7 @@
     "start": "concurrently \"npm run backend\" \"npm run python-backend\"",
     "fr": "cd frontend && npm run dev",
     "be": "cd Backend && node ./index.js",
-    "pb": "cd Backend && npm install && cd Pythonmodel && python Backend.py"
+    "pb": "cd Backend && npm install && cd Pythonmodel && python3 Backend.py"
   },
   "keywords": [],
   "author": "",
