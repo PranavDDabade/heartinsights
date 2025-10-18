@@ -9,7 +9,7 @@
     "python-backend": "cd backend && cd Pythonmodel && python Backend.py",
     "start": "concurrently \"npm run backend\" \"npm run python-backend\"",
     "fr": "cd frontend && npm run dev",
-    "be": "cd Backend && nodemon ./index.js",
+    "be": "cd Backend && node ./index.js",
     "pb": "cd backend && cd Pythonmodel && python Backend.py"
   },
   "keywords": [],
