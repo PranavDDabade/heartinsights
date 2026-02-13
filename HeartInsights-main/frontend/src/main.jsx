@@ -2,13 +2,13 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
-import Heartpredictstate from "./Context/heartpredictstatee.jsx";
+import Heartpredictstatee from "./Context/temp.jsx";
 
 createRoot(document.getElementById('root')).render(
-    <Heartpredictstate>
+    <Heartpredictstatee>
   <StrictMode>
     <App />
   </StrictMode>
-    </Heartpredictstate>
+    </Heartpredictstatee>
 ,
 )

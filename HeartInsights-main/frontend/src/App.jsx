@@ -20,7 +20,7 @@ import { useContext, useState } from "react";
 import SinglePredictionOutput from "./Components/SinglePredictionOutput";
 import Login from "./Components/Login";
 import Signup from "./Components/Signup";
-import Heartpredictstate from "./Context/heartpredictstatee";
+import Heartpredictstate from "./Context/temp";
 import Heartpredictcontext from "./Context/hearpredictcontext";
 import Profile from "./Components/Profile";
 import Forget from "./Components/Forget";
