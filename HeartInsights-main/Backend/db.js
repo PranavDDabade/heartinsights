@@ -1,8 +1,10 @@
 const mongoose=require('mongoose');
+const uri = 'mongodb+srv://pranavdabade:W1mnUZe4AKjaptHf@heartinsights.gbg20l6.mongodb.net/?appName=heartinsights'
+
 const connectToMongo=async()=>{
     try
     {
-        await mongoose.connect('mongodb://localhost:27017/');
+        await mongoose.connect(uri);
         console.log("Db connected Successfully")
     }
     catch(error)
