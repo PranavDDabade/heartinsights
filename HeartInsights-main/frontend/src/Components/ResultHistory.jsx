@@ -1,10 +1,10 @@
 import React, { useEffect, useState, useContext } from "react";
 import '../STYLE/ResultHistory.css';
 import { Download } from 'lucide-react';
-import Heartpredictcontext from "../Context/hearpredictcontext";
+import HeartPredictContext from "../Context/HeartPredictContext";
 
 export default function ResultHistory() {
-  const { authToken } = useContext(Heartpredictcontext);
+  const { authToken } = useContext(HeartPredictContext);
   const [singleHistory, setSingleHistory] = useState([]);
   const [bulkHistory, setBulkHistory] = useState([]);
 const [modalOpen, setModalOpen] = useState(false);

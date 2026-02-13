@@ -20,17 +20,17 @@ import { useContext, useState } from "react";
 import SinglePredictionOutput from "./Components/SinglePredictionOutput";
 import Login from "./Components/Login";
 import Signup from "./Components/Signup";
-import Heartpredictstate from "./Context/temp";
-import Heartpredictcontext from "./Context/hearpredictcontext";
+import HeartPredictState from "./Context/HeartPredictState";
+import HeartPredictContext from "./Context/HeartPredictContext";
 import Profile from "./Components/Profile";
 import Forget from "./Components/Forget";
 function App() {
   const [popup, setpopup] = useState({ msg: "", type: "" });
-  const context=useContext(Heartpredictcontext);
+  const context = useContext(HeartPredictContext);
   return (
     <>
-   <Router>
-        <Navbar setpopupfun={setpopup}/>
+      <Router>
+        <Navbar setpopupfun={setpopup} />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/dashboard" element={<Overallhealthanalysis />} />
@@ -40,20 +40,20 @@ function App() {
           />
           <Route path="/ResultHistory" element={<ResultHistory />} />
           <Route path="/Aiagent" element={<Aiagent />} />
-          <Route path="/About" element={<About setpopupfun={setpopup}/>} />
+          <Route path="/About" element={<About setpopupfun={setpopup} />} />
           <Route
             path="/SinglePredictionOutput"
             element={<SinglePredictionOutput />}
           />
-          <Route path="/Login" element={<Login  setpopupfun={setpopup}/>} />
-          <Route path="/Signup" element={<Signup  setpopupfun={setpopup}/>} />
-          <Route path="/profile" element={<Profile details={context.details} setpopupfun={setpopup} />}/>
-                    <Route path="/forget" element={< Forget setpopupfun={setpopup}/>}/>
+          <Route path="/Login" element={<Login setpopupfun={setpopup} />} />
+          <Route path="/Signup" element={<Signup setpopupfun={setpopup} />} />
+          <Route path="/profile" element={<Profile details={context.details} setpopupfun={setpopup} />} />
+          <Route path="/forget" element={< Forget setpopupfun={setpopup} />} />
         </Routes>
         <Alert popup={popup} setpopup={setpopup} />
-<Fotter/>
+        <Fotter />
       </Router>
-   </>
+    </>
   );
 }
 

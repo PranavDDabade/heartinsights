@@ -5,13 +5,13 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import CardiologistsFinder from './Cardiologistfinder.jsx'
 import { useNavigate } from "react-router-dom";
-import Heartpredictcontext from "../Context/hearpredictcontext.jsx";
+import HeartPredictContext from "../Context/HeartPredictContext.jsx";
 
 const Home = () => {
   const canvasRef = useRef(null);
   const animationRef = useRef();
       let history=useNavigate();
-      const context=useContext(Heartpredictcontext);
+      const context=useContext(HeartPredictContext);
  const steps = [
     {
       id: "01",

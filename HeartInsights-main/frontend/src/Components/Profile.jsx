@@ -1,10 +1,10 @@
 import React, { useContext, useEffect } from "react";
 import "../STYLE/profile.css";
-import Heartpredictcontext from "../Context/hearpredictcontext";
+import HeartPredictContext from "../Context/HeartPredictContext";
 import { useNavigate } from "react-router-dom";
 
 const Profile = (props) => {
-  const context = useContext(Heartpredictcontext);
+  const context = useContext(HeartPredictContext);
   const { details, authToken, Getuser } = context;
 const history=useNavigate();
   const { email = "", name = "", role = "" } = details || {};

@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import "../STYLE/Prediction.css";
 import { BrowserRouter as Router, Routes, Route, useNavigate, useLocation } from "react-router-dom";
 import { useContext } from "react";
-import Heartpredictcontext from "../Context/hearpredictcontext";
+import HeartPredictContext from "../Context/HeartPredictContext";
 import Inputinfo from "./Inputinfo";
 
 const Prediction = (props) => {
@@ -11,7 +11,7 @@ const Prediction = (props) => {
   const [isProcessing, setIsProcessing] = useState(false);
   const [dragActive, setDragActive] = useState(false);
   const navigate = useNavigate();
-const context=useContext(Heartpredictcontext);
+const context=useContext(HeartPredictContext);
   const fileInputRef = useRef(null);
   const {  authToken} = context;
 

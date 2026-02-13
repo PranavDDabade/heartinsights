@@ -1,10 +1,10 @@
 import {React,useContext,useEffect} from 'react'
 import '../STYLE/Fotter.css'
 import { useNavigate } from "react-router-dom";
-import Heartpredictcontext from '../Context/hearpredictcontext';
+import HeartPredictContext from '../Context/HeartPredictContext';
 const Fotter = () => {
       let history=useNavigate();
-      const context=useContext(Heartpredictcontext);
+      const context=useContext(HeartPredictContext);
 useEffect(() => {
     if (!context.authToken) {
       history("/Login");

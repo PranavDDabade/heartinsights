@@ -1,11 +1,11 @@
 import React, { useState,useContext } from "react";
 import "../STYLE/auth.css";
-import Heartpredictcontext from "../Context/hearpredictcontext";
+import HeartPredictContext from "../Context/HeartPredictContext";
 import { useNavigate } from "react-router-dom";
 
 
 export default function Forget(props) {
-      const context = useContext(Heartpredictcontext);
+      const context = useContext(HeartPredictContext);
 const history=useNavigate();
   const [inputValue, setInputValue] = useState({
     email: "",

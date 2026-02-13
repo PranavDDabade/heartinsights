@@ -3,11 +3,11 @@ import '../STYLE/Navbar.css'
 import {
   Link
 } from "react-router-dom";
-import Heartpredictcontext from '../Context/hearpredictcontext';
+import HeartPredictContext from '../Context/HeartPredictContext';
 
 const Navbar = (props) => {
  
-  const context= useContext(Heartpredictcontext);
+  const context= useContext(HeartPredictContext);
 
   return (
 <nav id="topnav" className={`${context.authToken ? '' : 'bgblue'}`}>

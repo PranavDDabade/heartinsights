@@ -1,6 +1,6 @@
 import React, { useState,useContext,useEffect } from "react";
 import "../STYLE/auth.css";
-import Heartpredictcontext from "../Context/hearpredictcontext";
+import HeartPredictContext from "../Context/HeartPredictContext";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useNavigate } from "react-router-dom";
@@ -9,7 +9,7 @@ import {
   Link
 } from "react-router-dom";
 export default function Login(props) {
-      const context = useContext(Heartpredictcontext);
+      const context = useContext(HeartPredictContext);
       
 const history=useNavigate();
   const [inputValue, setInputValue] = useState({

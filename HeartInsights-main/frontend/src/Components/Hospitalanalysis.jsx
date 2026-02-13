@@ -4,12 +4,12 @@ import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import ChartDataLabels from "chartjs-plugin-datalabels";
 import "../STYLE/Hospitalanalysis.css";
 import { useContext } from "react";
-import Heartpredictcontext from "../Context/hearpredictcontext";
+import HeartPredictContext from "../Context/HeartPredictContext";
 ChartJS.register(ArcElement, Tooltip, Legend, ChartDataLabels);
 
 const Hospitalanalysis = () => {
   const [summary, setSummary] = useState({ high: 0, medium: 0, low: 0 });
-const context=useContext(Heartpredictcontext);
+const context=useContext(HeartPredictContext);
   const {  authToken} = context;
   useEffect(() => {
     const fetchLatestRecord = async () => {

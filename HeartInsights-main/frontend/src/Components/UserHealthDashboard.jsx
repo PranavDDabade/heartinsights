@@ -5,10 +5,10 @@ import ProgressBar from "@ramonak/react-progress-bar";
 import * as Homeassests from "../assets/Images";
 import "../STYLE/UserHealthDashboard.css";
 import { useContext } from "react";
-import Heartpredictcontext from "../Context/hearpredictcontext";
+import HeartPredictContext from "../Context/HeartPredictContext";
 const Overallhealthanalysis = () => {
   const [data, setData] = useState(null);
-const context=useContext(Heartpredictcontext);
+const context=useContext(HeartPredictContext);
   const {  authToken} = context;
   useEffect(() => {
     Aos.init({ duration: 1200, once: true });

@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import Heartpredictcontext from './hearpredictcontext';
+import HeartPredictContext from './HeartPredictContext';
 
-const Heartpredictstate = (props) => {
+const HeartPredictState = (props) => {
   const [authToken, setAuthToken] = useState(localStorage.getItem('auth-token') || null);
-  const [role,setrole]=useState(localStorage.getItem('role')||null);
-  const [details,setdetails]=useState(null);
+  const [role, setrole] = useState(localStorage.getItem('role') || null);
+  const [details, setdetails] = useState(null);
   const Signupfun = async (credentials) => {
     const response = await fetch("http://localhost:5000/api/auth/Signup", {
       method: "POST",
@@ -20,11 +20,11 @@ const Heartpredictstate = (props) => {
     setrole(credentials.role);
     if (res.success) {
       localStorage.setItem("auth-token", res.authToken);
-      localStorage.setItem("role",res.role)
-      setAuthToken(res.authToken); 
+      localStorage.setItem("role", res.role)
+      setAuthToken(res.authToken);
       setrole(res.role)
 
-      return true; 
+      return true;
     }
     return false;
   }
@@ -41,9 +41,9 @@ const Heartpredictstate = (props) => {
     const res = await response.json();
     if (res.success) {
       localStorage.setItem("auth-token", res.authToken);
-            localStorage.setItem("role",res.role)
-            setrole(res.role)
-      setAuthToken(res.authToken); 
+      localStorage.setItem("role", res.role)
+      setrole(res.role)
+      setAuthToken(res.authToken);
       return true;
     }
     return false;
@@ -51,12 +51,12 @@ const Heartpredictstate = (props) => {
 
   const Logoutfun = () => {
     localStorage.removeItem('auth-token');
-          localStorage.removeItem("role")
+    localStorage.removeItem("role")
 
-    setAuthToken(null); 
+    setAuthToken(null);
     setrole(null);
   };
-const Getuser = async () => {
+  const Getuser = async () => {
     try {
       const response = await fetch("http://localhost:5000/api/auth/getuser", {
         method: "POST",
@@ -72,7 +72,7 @@ const Getuser = async () => {
           name: res.name || "",
           email: res.email || "",
           role: res.role || "",
-          id:res.id||""
+          id: res.id || ""
         };
         setdetails(userData);
         return true;
@@ -82,17 +82,17 @@ const Getuser = async () => {
     }
     return false;
   };
-const Updatepass = async (credentials) => {
+  const Updatepass = async (credentials) => {
     try {
       const response = await fetch("http://localhost:5000/api/auth/resetpassword", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-           body: JSON.stringify({
-        email: credentials.email,
-        password: credentials.password,
-      })
+        body: JSON.stringify({
+          email: credentials.email,
+          password: credentials.password,
+        })
       });
 
       const res = await response.json();
@@ -106,10 +106,10 @@ const Updatepass = async (credentials) => {
     return false;
   };
   return (
-    <Heartpredictcontext.Provider value={{ Signupfun, Loginfun, Logoutfun, authToken,role,Getuser,details,Updatepass}}>
+    <HeartPredictContext.Provider value={{ Signupfun, Loginfun, Logoutfun, authToken, role, Getuser, details, Updatepass }}>
       {props.children}
-    </Heartpredictcontext.Provider>
+    </HeartPredictContext.Provider>
   );
 }
 
-export default Heartpredictstate;
+export default HeartPredictState;
