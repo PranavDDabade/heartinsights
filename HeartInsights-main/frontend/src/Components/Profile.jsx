@@ -1,12 +1,12 @@
 import React, { useContext, useEffect } from "react";
-import "../STYLE/profile.css";
+import "../STYLE/Profile.css";
 import HeartPredictContext from "../Context/HeartPredictContext";
 import { useNavigate } from "react-router-dom";
 
 const Profile = (props) => {
   const context = useContext(HeartPredictContext);
   const { details, authToken, Getuser } = context;
-const history=useNavigate();
+  const history = useNavigate();
   const { email = "", name = "", role = "" } = details || {};
 
   useEffect(() => {
@@ -35,14 +35,14 @@ const history=useNavigate();
           <p>{role || "Loading..."}</p>
         </div>
 
-       <button
-  className="logout-btn"
-  onClick={() => {
-    context.Logoutfun(); 
-    history("/login");  
-                      props.setpopupfun({ msg: 'Logout Successfully',type: "success" });
-  }}
->Logout</button>
+        <button
+          className="logout-btn"
+          onClick={() => {
+            context.Logoutfun();
+            history("/login");
+            props.setpopupfun({ msg: 'Logout Successfully', type: "success" });
+          }}
+        >Logout</button>
       </div>
     </div>
   );
