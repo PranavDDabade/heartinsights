@@ -47,7 +47,7 @@ It provides authentication, prediction reports, bulk CSV analysis, and downloada
 
 HeartInsights/
 │
-├── frontend/
+├── frontend/<br>
 │ ├── src/
 │ ├── public/
 │ └── package.json
