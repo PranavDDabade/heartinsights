@@ -45,30 +45,30 @@ It provides authentication, prediction reports, bulk CSV analysis, and downloada
 
 ## 📁 Project Structure
 
-HeartInsights/
-│
+HeartInsights/<br>
+│<br>
 ├── frontend/<br>
-│ ├── src/
-│ ├── public/
-│ └── package.json
+│ ├── src/<br>
+│ ├── public/<br>
+│ └── package.json<br>
+│<br>
+├── backend/<br>
+│ ├── routes/<br>
+│ ├── models/<br>
+│ ├── middleware/<br>
+│ ├── uploads/<br>
+│ ├── reports/<br>
+│ ├── Pythonmodel/<br>
+│ │ ├── Backend.py<br>
+│ │ ├── heart_disease_model.pkl<br>
+│ │ ├── scaler.pkl<br>
+│ │ └── requirements.txt<br>
+│ └── index.js<br>
 │
-├── backend/
-│ ├── routes/
-│ ├── models/
-│ ├── middleware/
-│ ├── uploads/
-│ ├── reports/
-│ ├── Pythonmodel/
-│ │ ├── Backend.py
-│ │ ├── heart_disease_model.pkl
-│ │ ├── scaler.pkl
-│ │ └── requirements.txt
-│ └── index.js
-│
-└── README.md
+└── README.md<br>
+<br>
 
-
----
+---<br>
 
 ## ⚙️ Installation
 
